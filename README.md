@@ -13,4 +13,5 @@ $ rails s
 
 ## Test
 
-Visit http://localhost:3000/ and compare to `app/views/posts/_form.html.erb`.
+Visit [http://localhost:3000/](http://localhost:3000/) and compare to
+`app/views/posts/_form.html.erb`.
