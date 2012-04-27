@@ -1,0 +1,12 @@
+<%= form_for(@post) do |f| %>
+  <%= "Root form object class: " + f.object.class.name %><br/>
+  <%= "Root form object comments class: " + f.object.comments.first.class.name %><br/>
+
+  <%= f.fields_for :comments do |comment_fields| %>
+    <%= "Fields object class: " + comment_fields.object.class.name %><br/>
+  <% end %>
+
+  <%= f.fields_for :comments, f.object.comments do |comment_fields| %>
+    <%= "Fields object class (forced decoration): " + comment_fields.object.class.name %><br/>
+  <% end %>
+<% end %>
