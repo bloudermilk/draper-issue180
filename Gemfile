@@ -6,7 +6,7 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'draper', '~> 0.11.1'
+gem 'draper', git: "https://github.com/jcasimir/draper.git"
 
 
 # Gems used only for assets and not required

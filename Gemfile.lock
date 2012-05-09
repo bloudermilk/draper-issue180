@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/jcasimir/draper.git
+  revision: 554961483a9616814772bdf15c0926a002dde67c
+  specs:
+    draper (0.11.1)
+      activesupport (>= 2.3.10)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,8 +44,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.1)
-    draper (0.11.1)
-      activesupport (>= 2.3.10)
     erubis (2.7.0)
     execjs (1.3.1)
       multi_json (~> 1.0)
@@ -106,7 +111,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  draper (~> 0.11.1)
+  draper!
   jquery-rails
   rails (= 3.2.3)
   sass-rails (~> 3.2.3)
