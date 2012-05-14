@@ -1,12 +1,25 @@
 <%= form_for(@post) do |f| %>
-  <%= "Root form object class: " + f.object.class.name %><br/>
-  <%= "Root form object comments class: " + f.object.comments.first.class.name %><br/>
+  <p>
+    Root form object class: <%= f.object.class.name %><br/>
+    Root form object comments class: <%= f.object.comments.first.class.name %><br/>
+    Root form decorated object key: <%= f.object.wrapped_object.to_key %></br>
+    Root form wrapped object key: <%= f.object.to_key %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
 
   <%= f.fields_for :comments do |comment_fields| %>
-    <%= "Fields object class: " + comment_fields.object.class.name %><br/>
+    <p>
+      Fields object class: <%= comment_fields.object.class.name %><br/>
+      Fields decorated object key: <%= comment_fields.object.to_key %><br/>
+      Fields wrapped object key: <%= comment_fields.object.wrapped_object.to_key %><br/>
+      <%= comment_fields.label :body %><br/>
+      <%= comment_fields.text_area :body %>
+    </p>
   <% end %>
 
-  <%= f.fields_for :comments, f.object.comments do |comment_fields| %>
-    <%= "Fields object class (forced decoration): " + comment_fields.object.class.name %><br/>
-  <% end %>
+  <p><%= f.submit %></p>
 <% end %>
